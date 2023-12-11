@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vòng quay may mắn tháng 9</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top-center">
+        <img src="vognquaymayman_text.png" class="txt-vongquaymayman" alt="">
+    </div>
+
+    <div class="show-logo">
+        <img src="atlas-tires-logo-vector.png" alt="" class="logo-atlas">
+        <img src="Leao-Tires.png" alt="" class="logo-leao">
+    </div>
+    
+    <div class="vong-quay">
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+
+        <img onclick="click_button_quay()" src="muiten.png" class="img-muiten" alt="Image">       
+    </div>
+
+    <div class="button-bot">
+        <img onclick="click_thamgia()" src="button-thamgia.png" alt="" class="button-thamgia">
+    </div>
+
+    <div class="popup">
+        <div class="form">
+            <h2>Hãy điền thông tin để tham gia</h2>
+            <div class="form-element">
+                <lable class="nhan">Tên</lable>
+                <input type="text" id="" placeholder="Tên">
+            </div>
+            <div class="form-element">
+                <lable class="nhan">Số điện thoại</lable>
+                <input type="text" id="" placeholder="số điện thoại">
+            </div>
+            <div class="form-element">
+                <lable class="nhan">Size lốp</lable>
+                <input type="text" id="input-sizelop" placeholder="Size lốp">
+            </div>
+            <div class="form-element">
+                <button onclick="input_data()">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
