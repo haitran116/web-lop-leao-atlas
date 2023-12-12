@@ -1454,7 +1454,11 @@
 						</table>
 						<div class="cart-buttons">
 							<a class="boxed-btn" onclick="capnhaplai()">Cập nhập lại</a>
+<<<<<<< HEAD
 							<a onclick="focusElement()" class="boxed-btn-mua">Hoàn tất</a>
+=======
+							<a onclick="focusElement()" class="boxed-btn black">Hoàn tất</a>
+>>>>>>> 587d651a25eca5d517efbebc8029ca4dbb7b4653
 						</div>
 					</div>
 
@@ -1514,9 +1518,15 @@
 						        	<form action="">
 						        		<div><p><input id="tenkh_" type="text" placeholder="Tên"></p></div>
 						        		<div><p><input id="sodienthoai_" type="tel" placeholder="Số điện thoại(*)" pattern="[0-9]{10}" required></p></div>
+<<<<<<< HEAD
  								        <div><p><input id="email_" type="email" placeholder="Email (nếu có)"></p></div>
 						        		<div><p><input id="diachi_" type="text" placeholder="Địa chỉ (nếu có)"></p></div>
 						        		<div><p><textarea name="bill" id="ghichu_" cols="30" rows="10" placeholder="Ghi chú (nếu có)"></textarea></p></div>
+=======
+ 								        <div><p><input id="email_" type="email" placeholder="Email"></p></div>
+						        		<div><p><input id="diachi_" type="text" placeholder="Địa chỉ"></p></div>
+						        		<div><p><textarea name="bill" id="ghichu_" cols="30" rows="10" placeholder="Ghi chú"></textarea></p></div>
+>>>>>>> 587d651a25eca5d517efbebc8029ca4dbb7b4653
 						        		
 						        	</form>
 						        </div>
@@ -1530,7 +1540,11 @@
 					</div>
 				</div>
 				
+<<<<<<< HEAD
 			<a onclick="dat_hang()" style="margin-top: 20px;" class="boxed-btn-mua"> Đặt Hàng (thường sẽ phản hổi sau 5 phút)</a>
+=======
+			<a onclick="dat_hang()" style="margin-top: 20px;" class="boxed-btn">Đặt hàng</a>
+>>>>>>> 587d651a25eca5d517efbebc8029ca4dbb7b4653
 			</div>
 		</div>
 	</div>

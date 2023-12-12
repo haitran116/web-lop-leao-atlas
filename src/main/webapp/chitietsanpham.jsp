@@ -1444,10 +1444,17 @@
 								<a href="javascript:void(0);" onclick="themvaogio()" class="boxed-btn" style="border-radius: 10px;"><i
 								class="fas fa-shopping-cart"></i> Thêm vào giỏ</a>
 
+<<<<<<< HEAD
 							  	<a href="javascript:void(0);" onclick="mualuon()" class="boxed-btn-mua"> Đặt Hàng (thường sẽ phản hổi sau 5 phút)</a>					
 						</div>
 						<p style="margin-top: 20px;">
 							<strong>danh mục: </strong><a href="../Loc_theo_size?sizelop=<%=lopxe_tu_url.getSize() %>"><%=lopxe_tu_url.getSize() %></a>, <a href="../leao-atlas-michelin?page=1&th=<%=(lopxe_tu_url.getThuonghieu().equals("LEAO"))?"la":(lopxe_tu_url.getThuonghieu().equals("ATLAS")?"al":"mc") %>"><%=lopxe_tu_url.getThuonghieu() %></a>
+=======
+							  	<a href="javascript:void(0);" onclick="mualuon()" class="boxed-btn-mua"> Mua ngay</a>					
+						</div>
+						<p style="margin-top: 20px;">
+							<strong>danh mục: </strong><a href="../Loc_theo_size?sizelop=<%=lopxe_tu_url.getSize() %>"><%=lopxe_tu_url.getSize() %></a>,<a href="../leao-atlas-michelin?page=1&th=<%=(lopxe_tu_url.getThuonghieu().equals("LEAO"))?"la":(lopxe_tu_url.getThuonghieu().equals("ATLAS")?"al":"mc") %>"><%=lopxe_tu_url.getThuonghieu() %></a>
+>>>>>>> 587d651a25eca5d517efbebc8029ca4dbb7b4653
 						</p>
 						
 					</div>

@@ -13,7 +13,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+<<<<<<< HEAD
 import JavaMail.JavaMail;
+=======
+>>>>>>> 587d651a25eca5d517efbebc8029ca4dbb7b4653
 import dao.Get_data;
 import dao.do_dulieu_vao_data;
 
@@ -52,6 +55,7 @@ public class DatHang extends HttpServlet {
 		try {
 			Get_data gdt = new Get_data();
 			do_dulieu_vao_data dodulieu = new do_dulieu_vao_data();
+<<<<<<< HEAD
 			
 			JavaMail javaMail = new JavaMail();
 
@@ -87,12 +91,23 @@ public class DatHang extends HttpServlet {
 				
 				String list_sp = "";
 				int stt = 1;
+=======
+
+			// tạo mã khách hàng mới
+			int makhachhang = gdt.Query_sql_Max_MaKhachHang() + 1;
+
+			// nếu mua 2 mã sp
+			if (sanpham.split("-").length > 1) {
+				String[] array_sanpham = sanpham.split("-");
+
+>>>>>>> 587d651a25eca5d517efbebc8029ca4dbb7b4653
 				for (String sp : array_sanpham) {
 					if (sp != "") {
 						String size = sp.split("_")[0];
 						String tensanpham = sp.split("_")[1];
 
 						int soluong = Integer.parseInt(sp.split("_")[2]);
+<<<<<<< HEAD
 						
 						String list =stt + "- Size lốp: " + size + " |Mã lốp: " + tensanpham + " |Số lượng: " + soluong;
 						
@@ -105,12 +120,19 @@ public class DatHang extends HttpServlet {
 				}
 				
 				noidung = noidung + list_sp;
+=======
+
+						dodulieu.Sql_khach_hang_dat_hang(makhachhang, size, tensanpham, soluong);
+					}
+				}
+>>>>>>> 587d651a25eca5d517efbebc8029ca4dbb7b4653
 			} else {
 				sanpham = sanpham.split("-")[0];
 
 				String size = sanpham.split("_")[0];
 				String tensanpham = sanpham.split("_")[1];
 				int soluong = Integer.parseInt(sanpham.split("_")[2]);
+<<<<<<< HEAD
 				
 				String list_sp = "Size lốp: " + size + " |Mã lốp: " + tensanpham + " |Số lượng: " + soluong;
 				
@@ -123,12 +145,32 @@ public class DatHang extends HttpServlet {
 
 //			dodulieu.Sql_thong_tin_khach_dat_hang(makhachhang, tenkhachhang, email, diachi, sodienthoai, ghichu,
 //					vietnamDateTime);
+=======
+
+				dodulieu.Sql_khach_hang_dat_hang(makhachhang, size, tensanpham, soluong);
+			}
+			// Lấy datetime hiện tại
+			LocalDateTime currentDateTime = LocalDateTime.now();
+
+			// Đặt múi giờ Việt Nam
+			ZoneId vietnamZone = ZoneId.of("Asia/Ho_Chi_Minh");
+
+			// Chuyển đổi datetime hiện tại sang múi giờ Việt Nam
+			ZonedDateTime vietnamDateTime = currentDateTime.atZone(vietnamZone);
+
+			dodulieu.Sql_thong_tin_khach_dat_hang(makhachhang, tenkhachhang, email, diachi, sodienthoai, ghichu,
+					vietnamDateTime);
+>>>>>>> 587d651a25eca5d517efbebc8029ca4dbb7b4653
 
 			request.setAttribute("thongbao", "Quý khách đã đặt hàng thành công, bên em sẽ liện lạc lại ngay ạ !");
 
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
 			requestDispatcher.forward(request, response);
+<<<<<<< HEAD
 		} catch (Exception e) {
+=======
+		} catch (SQLException e) {
+>>>>>>> 587d651a25eca5d517efbebc8029ca4dbb7b4653
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

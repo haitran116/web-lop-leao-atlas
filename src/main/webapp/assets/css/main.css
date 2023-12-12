@@ -2689,7 +2689,10 @@ tr.total-data td strong {
 }
 
 .cart-buttons a:first-child {
+<<<<<<< HEAD
   margin-top: 30px;
+=======
+>>>>>>> 587d651a25eca5d517efbebc8029ca4dbb7b4653
   margin-right: 20px;
 }
 
